@@ -35,17 +35,22 @@ function CreateWindow(Config)
     local uis = game:GetService("UserInputService"); local rs = game:GetService("RunService")
 
     if pg:FindFirstChild("CryptUi") then pg.CryptUi:Destroy() end
-    
+
     local sg = Instance.new("ScreenGui", pg)
     sg.Name = "CryptUi"
     local Window = Instance.new("Frame", sg)
     Window.Name = "CryptUiWindow"
-    Window.Size = UDim2.new(0.33,0,0.57,0)
+    Window.Size = UDim2.new(0.33,0,0.63,0)
     Window.Position = UDim2.new(0.5,0,0.5,0)
     Window.AnchorPoint = Vector2.new(0.5, 0.5)
     Window.BackgroundColor3 = Theme.Background
     Window.BorderSizePixel = 0
     Instance.new("UICorner", Window).CornerRadius = UDim.new(0.04, 0)
+
+    local topbar = Instance.new("Frame", Window)
+    topbar.Name = "TopBar"
+    topbar.Size = UDim2.new(1,0,0.12,0)
+    topbar.BackgroundTransparency = 1
 
     return Window
 end
