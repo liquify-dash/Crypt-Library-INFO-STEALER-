@@ -115,9 +115,9 @@ function CreateWindow(Config)
     TabPadding.PaddingTop = UDim.new(0, 3)
 
     TabLayout:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(function()
-	    TabContent.CanvasSize = UDim2.new(0,0,0,TabLayout.AbsoluteContentSize.Y + TabContent.AbsoluteSize.Y * 0.05)
+	    TabContent.CanvasSize = UDim2.new(0,TabLayout.AbsoluteContentSize.X + TabContent.AbsoluteSize.X * 0.05,0,0)
     end)
-
+    
     function CreateTab(ConfigTab)
         ConfigTab = ConfigTab or {}
         local TabName = ConfigTab.Name or "Tab"
@@ -127,6 +127,7 @@ function CreateWindow(Config)
         Tab.BackgroundColor3 = Theme.Tab
         Tab.BorderSizePixel = 0
         Instance.new("UICorner", Tab).CornerRadius = UDim.new(1, 0)
+        return Tab
     end
 
     return Window
