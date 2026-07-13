@@ -102,7 +102,7 @@ function CreateWindow(Config)
     TabContent.Position = UDim2.new(0,0,0.12,0)
     TabContent.ScrollingDirection = Enum.ScrollingDirection.X
     TabContent.AutomaticCanvasSize = Enum.AutomaticSize.X
-    TabContent.BackgroundTransparency = 0
+    TabContent.BackgroundTransparency = 1
     TabContent.ScrollBarThickness = 0
 
     local TabLayout = Instance.new("UIListLayout", TabContent)
@@ -123,7 +123,7 @@ function CreateWindow(Config)
         local TabName = ConfigTab.Name or "Tab"
         local Tab = Instance.new("Frame", TabContent)
         Tab.Name = TabName
-        Tab.Size = UDim2.new(0.22,0,0.05,0)
+        Tab.Size = UDim2.new(0.22,0,0.9,0)
         Tab.BackgroundColor3 = Theme.Tab
         Tab.BorderSizePixel = 0
         Instance.new("UICorner", Tab).CornerRadius = UDim.new(1, 0)
