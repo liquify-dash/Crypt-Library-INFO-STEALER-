@@ -30,6 +30,7 @@ local Themes = {
 function CreateWindow(Config)
     local Theme = Themes[Config.Theme] or Themes.Dark
     local plr = game.Players.LocalPlayer; local pg = plr.PlayerGui ; local uis = game:GetService("UserInputService"); local rs = game:GetService("RunService")
+    if pg:FindFirstChild("CryptUi") then pg.CryptUi:Destroy() end
     local sg = Instance.new("ScreenGui", pg)
     sg.Name = "CryptUi"
     local Window = Instance.new("Frame", sg)
@@ -37,7 +38,7 @@ function CreateWindow(Config)
     Window.Size = UDim2.new(0.33,0,0.57,0)
     Window.Position = UDim2.new(0.5,0,0.5,0)
     Window.AnchorPoint = Vector2.new(0.5, 0.5)
-    Window.BackgroundColor3 = Themes[Config.Theme].Background
+    Window.BackgroundColor3 = Theme.Background
     Window.BorderSizePixel = 0
 
     local Title = Instance.new("TextLabel", Window)
@@ -45,8 +46,8 @@ function CreateWindow(Config)
     Title.Size = UDim2.new(1, 0, 0, 30)
     Title.Position = UDim2.new(0, 0, 0, 0)
     Title.Text = Config.Title
-    Title.TextColor3 = Themes[Config.Theme].Text
-    Title.BackgroundColor3 = Themes[Config.Theme].Button
+    Title.TextColor3 = Theme.Text
+    Title.BackgroundColor3 = Theme.Button
     Title.BorderSizePixel = 0
 
     return Window
