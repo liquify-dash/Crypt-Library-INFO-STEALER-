@@ -118,8 +118,6 @@ function CreateWindow(Config)
 	    TabContent.CanvasSize = UDim2.new(0,0,0,TabLayout.AbsoluteContentSize.Y + TabContent.AbsoluteSize.Y * 0.05)
     end)
 
-    ActiveTab = nil
-
     function CreateTab(ConfigTab)
         ConfigTab = ConfigTab or {}
         local TabName = ConfigTab.Name or "Tab"
