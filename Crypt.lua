@@ -64,6 +64,8 @@ function CreateWindow(Config)
 
     local sg = Instance.new("ScreenGui", pg)
     sg.Name = "CryptUi"
+    sg.ResetOnSpawn = false
+    
     local Window = Instance.new("Frame", sg)
     Window.Name = "Window"
     Window.Size = UDim2.new(0.33,0,0.63,0)
@@ -99,6 +101,14 @@ function CreateWindow(Config)
     subtitle.TextSize = 12
     subtitle.TextXAlignment = Enum.TextXAlignment.Left
     subtitle.BackgroundTransparency = 1
+
+    local TabContent = Instance.new("ScrollingFrame", Window)
+    TabContent.Name = "TabContent"
+    TabContent.Size = UDim2.new(1,0,0.11,0)
+    TabContent.Position = UDim2.new(0,0,0.12,0)
+    TabContent.ScrollingDirection = Enum.ScrollingDirection.X
+    TabContent.AutomaticCanvasSize = Enum.AutomaticSize.X
+    TabContent.BackgroundTransparency = 0
 
     return Window
 end
