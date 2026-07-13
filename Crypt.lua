@@ -12,13 +12,25 @@ local Themes = {
         Text = Color3.fromRGB(0, 0, 0),
         Button = Color3.fromRGB(200, 200, 200),
         ButtonText = Color3.fromRGB(0, 0, 0)
+    },
+    Violet = {
+        Background = Color3.fromRGB(75, 0, 130),
+        Text = Color3.fromRGB(255, 255, 255),
+        Button = Color3.fromRGB(138, 43, 226),
+        ButtonText = Color3.fromRGB(255, 255, 255)
+    },
+    Red = {
+        Background = Color3.fromRGB(139, 0, 0),
+        Text = Color3.fromRGB(255, 255, 255),
+        Button = Color3.fromRGB(178, 34, 34),
+        ButtonText = Color3.fromRGB(255, 255, 255)
     }
 }
 
 function CreateWindow(Config)
     local Theme = Themes[Config.Theme] or Themes.Dark
     local plr = game.Players.LocalPlayer; local pg = plr.PlayerGui ; local uis = game:GetService("UserInputService"); local rs = game:GetService("RunService")
-    local sg = Instance.new("ScreenGui")
+    local sg = Instance.new("ScreenGui", pg)
     sg.Name = "CryptUi"
     local Window = Instance.new("Frame", sg)
     Window.Name = "CryptUiWindow"
