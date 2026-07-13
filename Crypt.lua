@@ -15,7 +15,7 @@ local Themes = {
     }
 }
 
-local function CreateWindow(Config)
+function CreateWindow(Config)
     local Theme = Themes[Config.Theme] or Themes.Dark
     local plr = game.Players.LocalPlayer; local pg = plr.PlayerGui ; local uis = game:GetService("UserInputService"); local rs = game:GetService("RunService")
     local sg = Instance.new("ScreenGui")
