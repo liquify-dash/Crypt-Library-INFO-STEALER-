@@ -85,7 +85,7 @@ function CreateWindow(Config)
     title.Text = Title
     title.TextColor3 = Theme.Text
     title.Font = Enum.Font.GothamBold
-    title.TextSize = 20
+    title.TextSize = 19
     title.TextXAlignment = Enum.TextXAlignment.Left
     title.BackgroundTransparency = 1
 
@@ -96,7 +96,7 @@ function CreateWindow(Config)
     subtitle.Text = Subtitle
     subtitle.TextColor3 = Theme.SubText
     subtitle.Font = Enum.Font.Gotham
-    subtitle.TextSize = 14
+    subtitle.TextSize = 12
     subtitle.TextXAlignment = Enum.TextXAlignment.Left
     subtitle.BackgroundTransparency = 1
 
