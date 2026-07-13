@@ -28,9 +28,14 @@ local Themes = {
 }
 
 function CreateWindow(Config)
-    local Theme = Themes[Config.Theme] or Themes.Dark
-    local plr = game.Players.LocalPlayer; local pg = plr.PlayerGui ; local uis = game:GetService("UserInputService"); local rs = game:GetService("RunService")
+    Config = Config or {}
+    local Theme = Themes[Config.Theme or "Dark"]
+
+    local plr = game.Players.LocalPlayer; local pg = plr.PlayerGui
+    local uis = game:GetService("UserInputService"); local rs = game:GetService("RunService")
+
     if pg:FindFirstChild("CryptUi") then pg.CryptUi:Destroy() end
+    
     local sg = Instance.new("ScreenGui", pg)
     sg.Name = "CryptUi"
     local Window = Instance.new("Frame", sg)
@@ -46,3 +51,4 @@ function CreateWindow(Config)
 end
 
 return CryptUi
+
