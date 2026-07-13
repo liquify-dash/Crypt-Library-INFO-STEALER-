@@ -56,4 +56,3 @@ function CreateWindow(Config)
 end
 
 return CryptUi
-
