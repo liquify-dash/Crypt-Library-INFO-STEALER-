@@ -40,15 +40,7 @@ function CreateWindow(Config)
     Window.AnchorPoint = Vector2.new(0.5, 0.5)
     Window.BackgroundColor3 = Theme.Background
     Window.BorderSizePixel = 0
-
-    local Title = Instance.new("TextLabel", Window)
-    Title.Name = "Title"
-    Title.Size = UDim2.new(1, 0, 0, 30)
-    Title.Position = UDim2.new(0, 0, 0, 0)
-    Title.Text = Config.Title
-    Title.TextColor3 = Theme.Text
-    Title.BackgroundColor3 = Theme.Button
-    Title.BorderSizePixel = 0
+    Instance.new("UICorner", Window).CornerRadius = UDim.new(0.04, 0)
 
     return Window
 end
