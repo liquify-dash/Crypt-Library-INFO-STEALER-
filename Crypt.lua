@@ -119,15 +119,6 @@ function CreateWindow(Config)
     end)
 
     ActiveTab = nil
-    function Window:SetActiveTab(Tab)
-        if ActiveTab then
-            ActiveTab.Content.Visible = false
-            ActiveTab.Button.BackgroundColor3 = Theme.Tab
-        end
-        ActiveTab = Tab
-        ActiveTab.Content.Visible = true
-        ActiveTab.Button.BackgroundColor3 = Theme.Background
-    end
 
     function CreateTab(ConfigTab)
         ConfigTab = ConfigTab or {}
